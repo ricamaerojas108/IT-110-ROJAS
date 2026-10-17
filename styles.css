@@ -1,0 +1,936 @@
+/* =========================================
+   1. RESET AND GLOBAL STYLES
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #28080F;
+    background-color: #F7EDEF;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+h2 {
+    color: #861F35;
+}
+
+
+/* =========================================
+   2. NAVIGATION
+========================================= */
+
+.site-header {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 6%;
+    background-color: #28080F;
+    border-bottom: 3px solid #C58B96;
+}
+
+.logo {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #D99BA8;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    display: inline-block;
+    color: #F7EDEF;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 13px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+    background-color: #861F35;
+    border-color: #C58B96;
+}
+
+
+/* =========================================
+   3. FULL-WIDTH PAGE SECTIONS
+========================================= */
+
+.page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 85px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-margin-top: 0;
+}
+
+.page-number {
+    position: absolute;
+    right: 8%;
+    bottom: 25px;
+    color: #861F35;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.eyebrow {
+    color: #861F35;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.page-heading {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto 45px;
+}
+
+.page-heading h2 {
+    color: #28080F;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+
+/* More specific heading accent */
+
+.page-heading h2 span {
+    color: #861F35;
+    font-style: italic;
+}
+
+.section-subtitle {
+    color: #68454D;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   4. HOME PAGE
+========================================= */
+
+.home-page {
+    min-height: calc(100vh - 75px);
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    background-color: #F7EDEF;
+}
+
+.home-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+.home-content h1 {
+    color: #28080F;
+    font-size: clamp(55px, 7vw, 95px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.home-content h1 span {
+    color: #861F35;
+    font-style: italic;
+}
+
+.home-description {
+    color: #570D1B;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home-extra {
+    max-width: 600px;
+    color: #68454D;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.primary-button {
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #570D1B;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 14px 23px;
+    border: 1px solid #570D1B;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.primary-button:hover {
+    color: #28080F;
+    background-color: #E9C7CE;
+    transform: translateY(-2px);
+}
+
+.home-caption {
+    color: #861F35;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}
+
+.home-decoration {
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 360px;
+    height: 360px;
+    background-color: #E9C7CE;
+}
+
+.circle-two {
+    width: 280px;
+    height: 280px;
+    border: 1px solid #C58B96;
+}
+
+.initial-card {
+    position: relative;
+    z-index: 1;
+    width: 260px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #28080F;
+    color: #FFFFFF;
+    border: 8px solid #FFF8F8;
+    outline: 1px solid #C58B96;
+    box-shadow: 0 20px 45px rgba(40, 8, 15, 0.2);
+}
+
+.initial {
+    color: #E9C7CE;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 100px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.initial-caption {
+    color: #E9C7CE;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.initial-line {
+    width: 55px;
+    height: 2px;
+    background-color: #C58B96;
+    margin: 20px 0;
+}
+
+.initial-card p {
+    color: #F7EDEF;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.decoration-star {
+    position: absolute;
+    color: #861F35;
+    font-size: 35px;
+}
+
+.star-one {
+    top: 50px;
+    right: 12%;
+}
+
+.star-two {
+    left: 10%;
+    bottom: 65px;
+}
+
+
+/* =========================================
+   5. ABOUT PAGE
+========================================= */
+
+.about-page {
+    background-color: #FFF9F8;
+}
+
+.about-layout {
+    width: 100%;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 70px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.about-intro {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    background-color: #F1DDE1;
+    border: 1px solid #D7A8B1;
+}
+
+.about-monogram {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F7EDEF;
+    background-color: #570D1B;
+    border: 8px solid #FFF9F8;
+    outline: 1px solid #C58B96;
+    border-radius: 50%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 55px;
+    font-style: italic;
+}
+
+.monogram-caption {
+    color: #570D1B;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 25px;
+}
+
+.about-line {
+    width: 45px;
+    height: 2px;
+    background-color: #861F35;
+    margin: 20px 0;
+}
+
+.about-quote {
+    max-width: 300px;
+    color: #570D1B;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.about-details h3 {
+    color: #570D1B;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-details p {
+    color: #68454D;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.about-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.fact {
+    padding: 17px 12px;
+    background-color: #F7EDEF;
+    border-bottom: 3px solid #861F35;
+}
+
+.fact-label {
+    display: block;
+    color: #861F35;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.fact strong {
+    color: #28080F;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   6. SKILLS PAGE
+========================================= */
+
+.skills-page {
+    background-color: #F3E5E8;
+}
+
+.skills-layout {
+    width: 100%;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    margin: 0 auto;
+}
+
+.skills-intro {
+    padding: 35px;
+    background-color: #28080F;
+    color: #FFFFFF;
+}
+
+.large-letter {
+    color: #C58B96;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 100px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.skills-intro h3 {
+    color: #F1DDE1;
+    font-size: 28px;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+
+.skills-intro>p:not(.large-letter) {
+    color: #EBD7DC;
+    font-size: 14px;
+}
+
+.skills-note {
+    padding: 20px;
+    margin-top: 35px;
+    border: 1px solid #7B3445;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.skills-note span {
+    display: block;
+    color: #E9C7CE;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.skills-note p {
+    color: #FFFFFF;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.skill {
+    margin-bottom: 28px;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.skill-top h3 {
+    color: #28080F;
+    font-size: 19px;
+}
+
+.skill-top span {
+    color: #861F35;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.skill>p {
+    color: #68454D;
+    font-size: 13px;
+    margin: 5px 0 10px;
+}
+
+.skill-track {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    background-color: #E2C7CD;
+    border-radius: 20px;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #570D1B, #C58B96);
+    border-radius: 20px;
+}
+
+.html-fill {
+    width: 75%;
+}
+
+.css-fill {
+    width: 65%;
+}
+
+.teamwork-fill {
+    width: 80%;
+}
+
+.creativity-fill {
+    width: 75%;
+}
+
+.other-skills {
+    border-top: 1px solid #D7A8B1;
+    padding-top: 22px;
+    margin-top: 20px;
+}
+
+.other-skills>span {
+    display: block;
+    color: #861F35;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    padding: 8px 13px;
+    color: #570D1B;
+    background-color: #FFF9F8;
+    border: 1px solid #D7A8B1;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   7. LIFE NOTES PAGE
+========================================= */
+
+.notes-page {
+    background-color: #FFF9F8;
+}
+
+.notes-grid {
+    width: 100%;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin: 0 auto;
+}
+
+.life-note {
+    position: relative;
+    min-height: 280px;
+    padding: 30px;
+    background-color: #F8ECEF;
+    border: 1px solid #E9D1D7;
+    border-top: 4px solid #861F35;
+    transition: 0.3s ease;
+}
+
+.life-note:hover {
+    background-color: #F1DDE1;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(40, 8, 15, 0.08);
+}
+
+.note-number {
+    color: #861F35;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.note-symbol {
+    display: block;
+    color: #B66D7D;
+    font-size: 28px;
+    margin: 14px 0;
+}
+
+.life-note h3 {
+    color: #570D1B;
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.life-note p {
+    color: #68454D;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.note-footer {
+    display: block;
+    color: #861F35;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-top: auto;
+}
+
+
+/* Required display and visibility examples */
+
+.hide-none {
+    display: none;
+}
+
+.hide-visibility {
+    visibility: hidden;
+}
+
+
+/* =========================================
+   8. HOBBIES PAGE
+========================================= */
+
+.hobbies-page {
+    background-color: #F3E5E8;
+}
+
+.hobbies-layout {
+    width: 100%;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 55px;
+    align-items: start;
+    margin: 0 auto;
+}
+
+.hobby-feature {
+    padding: 35px;
+    color: #FFFFFF;
+    background-color: #28080F;
+    border-bottom: 5px solid #C58B96;
+}
+
+.hobby-feature h3 {
+    color: #F1DDE1;
+    font-size: 31px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.hobby-feature>p:not(.eyebrow) {
+    color: #EBD7DC;
+    font-size: 14px;
+}
+
+.hobby-quote {
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #7B3445;
+    color: #E9C7CE;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.hobby-row {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr) 25px;
+    align-items: start;
+    gap: 18px;
+    padding: 24px 0;
+    border-bottom: 1px solid #D7A8B1;
+}
+
+.hobby-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #570D1B;
+    border-radius: 50%;
+    font-size: 23px;
+}
+
+.hobby-row h3 {
+    color: #570D1B;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.hobby-row p {
+    color: #68454D;
+    font-size: 13px;
+}
+
+.hobby-index {
+    color: #861F35;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   9. CLOSING SECTION
+========================================= */
+
+.closing-page {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #E9C7CE;
+}
+
+.closing-page h2 {
+    color: #28080F;
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.closing-page h2 span {
+    color: #861F35;
+    font-style: italic;
+}
+
+.closing-page>p:not(.eyebrow) {
+    max-width: 550px;
+    color: #68454D;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   10. FOOTER
+========================================= */
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    background-color: #28080F;
+    border-top: 4px solid #C58B96;
+}
+
+.footer-name {
+    color: #F1DDE1;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #EBD7DC;
+    font-size: 12px;
+}
+
+.copyright {
+    color: #D7A8B1;
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   11. REFLECTIONS
+========================================= */
+
+
+/*
+1. The rule won because it had more priority than the other rule. CSS follows the order and priority of the rules.
+
+2. If box-sizing was content-box, the card would become wider because the padding and border are added to the width. The actual size would be bigger than the given width.
+
+3.  I would use visibility: hidden when I want to hide something but keep its space on the page. I would use display: none when I want it to disappear completely.
+*/
+
+
+/* =========================================
+   12. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1000px) {
+    .page {
+        padding: 75px 5%;
+    }
+    .home-page {
+        gap: 20px;
+    }
+    .about-layout,
+    .skills-layout,
+    .hobbies-layout {
+        gap: 35px;
+    }
+    .notes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .about-facts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    nav {
+        justify-content: center;
+    }
+    nav a {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+    .page {
+        min-height: auto;
+        padding: 65px 22px 75px;
+    }
+    .home-page {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .home-content h1 {
+        font-size: 58px;
+    }
+    .home-decoration {
+        min-height: 330px;
+    }
+    .circle-one {
+        width: 270px;
+        height: 270px;
+    }
+    .circle-two {
+        width: 220px;
+        height: 220px;
+    }
+    .initial-card {
+        width: 205px;
+        min-height: 235px;
+    }
+    .initial {
+        font-size: 75px;
+    }
+    .about-layout,
+    .skills-layout,
+    .hobbies-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .about-intro {
+        min-height: 330px;
+    }
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+    .life-note {
+        min-height: auto;
+    }
+    .about-facts {
+        grid-template-columns: 1fr;
+    }
+    .page-heading {
+        margin-bottom: 30px;
+    }
+    .page-number {
+        right: 22px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-content h1 {
+        font-size: 48px;
+    }
+    .home-description {
+        font-size: 17px;
+    }
+    .hobby-row {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px;
+    }
+    .hobby-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .hobby-index {
+        display: none;
+    }
+    .skills-intro,
+    .hobby-feature {
+        padding: 24px;
+    }
+}
